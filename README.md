@@ -12,7 +12,7 @@ l'arbre, classificar exemples mai vistos. La figura següent mostra un exemple
 d'arbre per discernir si un bolet és comestible (*edible*) o verinós 
 (*poisonous*):
 
-![](figures/dt.png)
+![](dt.png)
 
 Els arbres de decisió són un algorisme clàssic de l'aprenentatge automàtic 
 (*Machine Learning*). Podeu trobar una descripció pas a pas del seu 
@@ -32,9 +32,8 @@ Cada fila correspon a un bolet. Una de les columnes és la classe (si és verin�
 o comestible) i la resta corresponen als atributs (característiques) del
 bolet. Es diu que tots aquests atributs són nominals (*strings*).
 
-La taula següent mostra el subconjunt de 7 exemples i 4 columnes del que 
-s'ha generat l'arbre de decisió mostrat en aquest
-document.
+La taula següent mostra el subconjunt de 7 exemples i 4 columnes a partir del
+que s'ha generat l'arbre de decisió mostrat en aquest document.
 
 | class | cap-shape | cap-color | gill-color |
 |-------|-----------|-----------|------------|
@@ -50,23 +49,23 @@ document.
 
 L'objectiu de la pràctica és programar un sistema de producció per
 muntar classificadors de bolets amb arbres de decisió. 
-S'utilitzarà el conjunt de dades del *mushroom*.
+S'utilitzarà el conjunt del *mushroom* com a dades dels models.
 
 La pràctica consistirà en dos grans blocs: la construcció de l'arbre i 
 la classificació.
 
-### Construcció d'un arbre de decisió a partir de les dades:
+### Construcció d'un arbre de decisió
 
 Aquesta funció tindrà un parell de paràmetres:
 
-- El número $n$ d'exemples a processar. La funció ha de construir el model
-seleccionant aleatòriament $n$ exemples diferents del conjunt total.
-És a dir, si $n$ és 100 l'arbre s'ha de construir a partir de 100 
+- El número **n** d'exemples a processar. La funció ha de construir el model
+seleccionant aleatòriament **n** exemples diferents del conjunt total.
+És a dir, si **n** és 100 l'arbre s'ha de construir a partir de 100 
 exemples escollits aleatòriament d'entre els 8124 que formen el conjunt 
 original.
 
-- La profunditat $p$ màxima de l'arbre. L'arbre resultat de la funció no ha
-de tenir una profunditat superior a $p$. La classe de les fulles serà
+- La profunditat **p** màxima de l'arbre. L'arbre resultat de la funció no ha
+de tenir una profunditat superior a **p**. La classe de les fulles serà
 sempre la classe majoritària del subconjunt que li queda.
 
 Aquesta funció ha de tornar l'arbre resultant, que s'ha de poder 
