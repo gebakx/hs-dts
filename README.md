@@ -56,18 +56,6 @@ la classificació.
 
 ### Construcció d'un arbre de decisió
 
-Aquesta funció tindrà un parell de paràmetres:
-
-- El número **n** d'exemples a processar. La funció ha de construir el model
-seleccionant aleatòriament **n** exemples diferents del conjunt total.
-És a dir, si **n** és 100 l'arbre s'ha de construir a partir de 100 
-exemples escollits aleatòriament d'entre els 8124 que formen el conjunt 
-original.
-
-- La profunditat **p** màxima de l'arbre. L'arbre resultat de la funció no ha
-de tenir una profunditat superior a **p**. La classe de les fulles serà
-sempre la classe majoritària del subconjunt que li queda.
-
 Aquesta funció ha de tornar l'arbre resultant, que s'ha de poder 
 mostrar. Un exemple de com es podria mostrar l'arbre anterior seria:
 
@@ -98,58 +86,6 @@ partir de l'arbre exemple de dalt:
 <user> bell
 <system> Prediction: edible
 ```
-
-## Nombres aleatoris en Haskell
-
-El programa següent mostra com treballar senzillament amb nombres aleatoris en
-Haskell:
-
-```haskell
-import System.Random
-
-randInt :: Int -> Int -> IO Int
--- randInt low high is an IO action that returns a
--- pseudo-random integer between low and high (both included).
-
-randInt low high = do
-    random <- randomIO :: IO Int
-    let result = low + random `mod` (high - low + 1)
-    return result
-
-main :: IO ()
--- main program that throws two dice.
-
-main = do
-    r1 <- randInt 1 6
-    r2 <- randInt 1 6
-    print (r1, r2)
-```
-
-Fixeu-vos que els nombres aleatoris s'obtenen dins de la mònada IO,
-utilitzant l'acció
-`randomIO :: IO a`
-on `a` pot ser `Bool`, `Char`, `Double`, `Float`, `Int`, `Integer`...
-
-Per poder importar `System.Random`, segurament haureu d'instal·lar
-abans el paquet `random`. En Mac:
-
-```bash
-> brew install cabal-install
-> cabal update
-> cabal install --lib random
-```
-
-En Ubuntu:
-
-```bash
-> sudo apt install cabal-install
-> cabal update
-> cabal install random
-```
-
-Sembla que segons els sistema i la versió cal jugar una mica
-amb el `--lib`.
-
 
 ## Lliurament
 
