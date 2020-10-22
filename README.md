@@ -87,6 +87,30 @@ partir de l'arbre exemple de dalt:
 <system> Prediction: edible
 ```
 
+### Lectura de fitxers en Haskell:
+
+La lectura de fitxers de text en Haskell es pot fer de forma fàcil mitjançant la funció:
+
+```
+readFile :: FilePath -> IO String
+```
+
+Així, si volem fer un programa que mostri per pantalla el contingut 
+d'un arxiu de text només hem fer quelcom com:
+
+```
+main :: IO ()
+main = do
+    contents <- readFile "exemple.txt"
+    putStrLn contents
+```
+
+La funció `lines` us pot ser de gran utilitat:
+
+```
+lines :: String -> [String]
+```
+
 ## Lliurament
 
 Només heu de lliurar un fitxer ZIP que, al descomprimir-se,
@@ -110,7 +134,7 @@ adequadament. Vegeu, per
 exemple, [aquest document](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). Si us calen
 imatges al `README.md`, deseu-les com a fitxers PNG.
 
-El lliurament s'ha de fer a través del Racó, abans del **diumenge 29 de novembre a les
+El lliurament s'ha de fer a través del Racó, abans del **dilluns 23 de novembre a les
 23:59**.
 
 ## Referències
