@@ -120,6 +120,8 @@ generi els fitxers següents:
 
 - `README.md`: la documentació de la vostra pràctica,
 
+- `agaricus-lepiota.data`: l'arxiu de dades,
+
 - `*.png` si cal adjuntar imatges a la documentació.
 
 Res més. Sense directoris ni subdirectoris.
@@ -128,6 +130,9 @@ El codi s'ha de poder compilar i generar un executable amb la comanda
 `ghc dts.hs`. Totes les funcions i
 definicions de tipus han d'estar
 documentades en el propi codi amb comentaris adients.
+
+El programa ha de llegir l'arxiu de dades directament. 
+És a dir, no cal que el programa tingui cap paràmetre.
 
 El projecte ha de contenir un fitxer `README.md` que el documenti
 adequadament. Vegeu, per
