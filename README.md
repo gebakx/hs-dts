@@ -135,8 +135,7 @@ El programa ha de llegir l'arxiu de dades directament.
 És a dir, no cal que el programa tingui cap paràmetre.
 
 El projecte ha de contenir un fitxer `README.md` que el documenti
-adequadament. Vegeu, per
-exemple, [aquest document](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). Si us calen
+adequadament. Vegeu [https://guides.github.com/features/wikis/#Formatting-a-readme](https://guides.github.com/features/wikis/#Formatting-a-readme). Si us calen
 imatges al `README.md`, deseu-les com a fitxers PNG.
 
 El lliurament s'ha de fer a través del Racó, abans del **dilluns 23 de novembre a les
